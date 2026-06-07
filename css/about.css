@@ -1445,6 +1445,76 @@ header nav ul li a.active {
     line-height: 1.5;
 }
 
+/* Skills Card Styles */
+.skills-card {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.skills-category {
+    background-color: rgba(51, 52, 70, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#skills.tab-content.active .skills-category,
+#skills.tab-content.hover .skills-category {
+    animation: slideUpFade 0.5s ease forwards;
+}
+
+#skills.tab-content.active .skills-category:nth-child(1),
+#skills.tab-content.hover .skills-category:nth-child(1) { animation-delay: 0.1s; }
+#skills.tab-content.active .skills-category:nth-child(2),
+#skills.tab-content.hover .skills-category:nth-child(2) { animation-delay: 0.2s; }
+#skills.tab-content.active .skills-category:nth-child(3),
+#skills.tab-content.hover .skills-category:nth-child(3) { animation-delay: 0.3s; }
+#skills.tab-content.active .skills-category:nth-child(4),
+#skills.tab-content.hover .skills-category:nth-child(4) { animation-delay: 0.4s; }
+#skills.tab-content.active .skills-category:nth-child(5),
+#skills.tab-content.hover .skills-category:nth-child(5) { animation-delay: 0.5s; }
+#skills.tab-content.active .skills-category:nth-child(6),
+#skills.tab-content.hover .skills-category:nth-child(6) { animation-delay: 0.6s; }
+
+.skills-category:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 138, 28, 0.3);
+}
+
+.skills-category h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.skills-category h3 i {
+    color: #008a1c;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#skills.tab-content.active, #skills.tab-content.hover {
+    animation: slideUpFade 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
 /* Footer Styles */
 footer {
     background-color: #2a2b3d;

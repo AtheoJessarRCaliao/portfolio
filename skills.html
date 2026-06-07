@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills | My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <main>
+        <!-- Header Section with Navigation -->
+        <a href="experience.html" class="back-icon">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <!-- Background Elements -->
+            <div class="bg-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            <div class="grid-overlay"></div>
+            
+            <div class="container">
+                <h1 class="section-title" data-aos="fade-up">Technical Skills Profile</h1>
+                
+                <div class="skills-container">
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="fas fa-layer-group"></i> Frameworks/Libraries</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="fas fa-database"></i> Databases</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Relational SQL Databases</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3><i class="fas fa-cogs"></i> Core Competencies</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+                            <span class="skill-tag">Data Structures & Algorithms</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="500">
+                        <h3><i class="fas fa-sitemap"></i> Architecture & Design</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">MVC</span>
+                            <span class="skill-tag">MERN Stack</span>
+                            <span class="skill-tag">UI/UX Implementation</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="600">
+                        <h3><i class="fas fa-language"></i> Spoken Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">English (Native/Professional, TOEIC 945)</span>
+                            <span class="skill-tag">Japanese (JLPT N2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Animate background shapes
+            const shapes = document.querySelectorAll('.bg-shapes .shape');
+            shapes.forEach((shape, index) => {
+                // Set random initial positions
+                const randomX = Math.random() * 10 - 5;
+                const randomY = Math.random() * 10 - 5;
+                const randomDelay = index * 0.5;
+                
+                shape.style.animation = `float-shape ${20 + index * 5}s infinite linear ${randomDelay}s`;
+                shape.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

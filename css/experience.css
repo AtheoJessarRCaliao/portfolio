@@ -1,0 +1,273 @@
+/* Experience Page Specific Styles */
+
+/* Back Icon */
+.back-icon {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 138, 28, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-icon i {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.back-icon:hover {
+    background-color: rgba(0, 138, 28, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-icon:hover i {
+    transform: translateX(-3px);
+}
+
+.experience-section {
+    padding: 80px 0 80px;
+    background-color: #2a2b3d;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #008a1c;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.skills-link-btn {
+    display: inline-block;
+    background-color: rgba(0, 138, 28, 0.1);
+    color: #4cd964;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(0, 138, 28, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-link-btn i {
+    margin-right: 8px;
+}
+
+.skills-link-btn:hover {
+    background-color: #008a1c;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 138, 28, 0.3);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    width: 4px;
+    background: rgba(0, 138, 28, 0.3);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 17px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #008a1c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 0 0 5px rgba(0, 138, 28, 0.2);
+    z-index: 1;
+}
+
+.timeline-content {
+    background-color: rgba(51, 52, 70, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 138, 28, 0.3);
+}
+
+.experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.project-title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.role {
+    color: #008a1c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.tech-tag {
+    background-color: rgba(0, 138, 28, 0.1);
+    color: #4cd964;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 138, 28, 0.3);
+}
+
+.project-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-details li {
+    color: #a8b2d1;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.project-details li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #008a1c;
+    font-weight: bold;
+}
+
+/* Background elements */
+.bg-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 138, 28, 0.1) 0%, rgba(234, 239, 239, 0.1) 100%);
+    opacity: 0.3;
+    animation: float-shape 20s infinite linear;
+}
+
+.shape:nth-child(1) { width: 400px; height: 400px; top: 10%; left: 5%; animation-duration: 35s; }
+.shape:nth-child(2) { width: 300px; height: 300px; top: 60%; right: 5%; animation-duration: 45s; animation-delay: 2s; }
+.shape:nth-child(3) { width: 200px; height: 200px; top: 30%; right: 20%; animation-duration: 40s; animation-delay: 5s; }
+.shape:nth-child(4) { width: 150px; height: 150px; top: 70%; left: 20%; animation-duration: 30s; animation-delay: 7s; }
+
+@keyframes float-shape {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-title { font-size: 2.2rem; }
+    .timeline::before { left: 15px; }
+    .timeline-icon { left: 2px; }
+    .timeline-item { padding-left: 50px; }
+    .project-title { font-size: 1.4rem; }
+}
