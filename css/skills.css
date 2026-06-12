@@ -43,7 +43,7 @@
 }
 
 .skills-section .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -73,8 +73,8 @@
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 36px;
 }
 
 .skills-category {
@@ -105,6 +105,23 @@
     padding-bottom: 15px;
 }
 
+.skills-category h3::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.skills-category[data-dot="green"] h3::before { background: #00c853; }
+.skills-category[data-dot="blue"] h3::before { background: #2979ff; }
+.skills-category[data-dot="pink"] h3::before { background: #ff4081; }
+.skills-category[data-dot="teal"] h3::before { background: #00bfa5; }
+.skills-category[data-dot="orange"] h3::before { background: #ff9100; }
+.skills-category[data-dot="gray"] h3::before { background: #90a4ae; }
+
 .skills-category h3 i {
     color: #008a1c;
     margin-right: 12px;
@@ -117,21 +134,31 @@
     gap: 12px;
 }
 
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 .skill-tag {
-    background-color: rgba(0, 138, 28, 0.1);
-    color: #4cd964;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 1rem;
+    background-color: rgba(255,255,255,0.04);
+    color: #e6eef8;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 138, 28, 0.3);
+    transition: all 0.18s ease;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
+.skill-tag i { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
 .skill-tag:hover {
-    background-color: #008a1c;
-    color: white;
+    background-color: rgba(255,255,255,0.06);
     transform: translateY(-3px);
+}
     box-shadow: 0 5px 15px rgba(0, 138, 28, 0.2);
 }
 
@@ -181,4 +208,8 @@
 @media (max-width: 768px) {
     .section-title { font-size: 2.2rem; }
     .skills-container { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-container { grid-template-columns: repeat(2, 1fr); }
 }
